@@ -1,0 +1,22 @@
+:root{
+  --aquablue: rgb(65, 84, 255);
+  --white: rgb(224, 224, 224);
+}
+
+/*For birthday  project*/
+.box{
+  width: 250px;
+  margin: 0%;
+  padding: 0%;
+}
+
+.h11{
+  float: left;
+}
+
+.h12{
+  float: left;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}

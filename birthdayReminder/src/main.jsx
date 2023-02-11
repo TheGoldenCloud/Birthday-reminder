@@ -1,10 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import BirthdayCard from './birthdayCard'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('nav')).render(
   <React.StrictMode>
-    <App />
+    <BirthdayCard />
   </React.StrictMode>,
 )
