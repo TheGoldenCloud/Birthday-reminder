@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Person from './personComponent'
 import Perosn1 from "./photos/person1.jpg";
@@ -9,18 +9,43 @@ import Perosn5 from "./photos/person5.png";
 
 function BirthdayCard() {
 
-  //useEffect da loaduje iz endpointa
+  let fetchData = async () => {
+    try{
+      let response = await fetch('http://localhost:4000/persons');
+      let data = await response.json();
+      //console.log(data);
+      //setPerson(data);
+      //return data;
+      //data[0].idimg = Perosn1;
+      
+      data[0].idimg = Perosn1
+      data[1].idimg = Perosn2
+      data[2].idimg = Perosn3
+      data[3].idimg = Perosn4
+      data[4].idimg = Perosn5
+      
+      setPerson(data);
 
-  let [persons, setPerson] = useState([
-    { id: 1, name: 'Lana Rhoades', age: 26, img: Perosn1 },
-    { id: 2, name: 'Eva Elfie', age: 24, img: Perosn2 },
-    { id: 3, name: 'Sweetie Fox', age: 25, img: Perosn3 },
-    { id: 4, name: 'Eva Elfie', age: 27, img: Perosn4 },
-    { id: 5, name: 'Sweetie Fox', age: 28, img: Perosn5 }
-  ]);
+    }catch(err){
+      console.log(err);
+    }
+  }
 
-  let [count,setCount] = useState(persons.length)
+  //useEffect da loaduje iz endpointa i ENEBLUJ CORS ZA KOMUNIKACIJU!!!
+  useEffect(()=>{
+    fetchData();  
+  },[])
 
+  let [persons, setPerson] = useState([]);
+  // let [persons, setPerson] = useState([
+  //   { id: 1, name: 'Lana Rhoades', age: 26, img: Perosn1 },
+  //   { id: 2, name: 'Eva Elfie', age: 24, img: Perosn2 },
+  //   { id: 3, name: 'Sweetie Fox', age: 25, img: Perosn3 },
+  //   { id: 4, name: 'Eva Elfie', age: 27, img: Perosn4 },
+  //   { id: 5, name: 'Sweetie Fox', age: 28, img: Perosn5 }
+  // ]);
+
+  let count = persons.length;
 
   let style = {
     card: { 
@@ -46,10 +71,10 @@ function BirthdayCard() {
         <h3> {count} Birthdays today</h3>
         <div className="card-body p-1" >
 
-          { persons.map(p=> <Person key={p.id} name = {p.name} age = {p.age} img = {p.img} />) }
+          { persons.map(p=> <Person key={p.id} name = {p.name} age = {p.age} img = {p.idimg} />) }
           
         </div>
-        <button className="btn btn-primary" style={style.button} onClick = {()=>{setPerson([...persons] = []); setCount(0);}}>Clear all</button>
+        <button className="btn btn-primary" style={style.button} onClick = {()=>{setPerson([...persons] = []); count = 0;}}>Clear all</button>
       </div>
     </React.Fragment>
   );
