@@ -9,6 +9,8 @@ import Perosn5 from "./photos/person5.png";
 
 function BirthdayCard() {
 
+  //useEffect da loaduje iz endpointa
+
   let [persons, setPerson] = useState([
     { id: 1, name: 'Lana Rhoades', age: 26, img: Perosn1 },
     { id: 2, name: 'Eva Elfie', age: 24, img: Perosn2 },
