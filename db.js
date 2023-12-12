@@ -1,33 +1,13 @@
+import mysql2 from 'mysql2';
 
+import dotenv from 'dotenv';
+dotenv.config();
 
-// const connection = mysql.createConnection({
-//   host: 'localhost\\SQLEXPRESS',
-//   driver: 'msnodesqlv8',
-//   database: 'birthday'
-// });
+const pool = mysql2.createPool({
+    host: process.env.MYSQL_HOST,
+    user:process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DATABASE
+}).promise();
 
-
-
-
-// let connect = () => {
-//     connection.connect((err) => {
-//         if (err) {
-//           console.error('Error connecting to MySQL:', err);
-//           return;
-//         }
-      
-//         console.log('Connected to MySQL database');
-      
-//         // Perform your database operations here
-      
-//         connection.end((err) => {
-//           if (err) {
-//             console.error('Error closing MySQL connection:', err);
-//           } else {
-//             console.log('MySQL connection closed');
-//           }
-//         });
-//       });
-// }
-
-module.exports = connect;
+module.exports = pool;
