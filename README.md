@@ -2,20 +2,20 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/TheGoldenCloud/Days_countdown">
-    <img src="/public/birthday-cake-svgrepo-com.svg" alt="Logo" width="80" height="80">
+  <a href="https://github.com/TheGoldenCloud/Birthday-reminder">
+    <img src="./birthdayReminder/public/birthday-cake-svgrepo-com.svg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Days to come</h3>
+<h3 align="center">Birthday reminder</h3>
 
   <p align="center">
     Small Electron app that stores events and counting days for them to finnish 
     <br />
     <br />
     ·
-    <a href="https://github.com/TheGoldenCloud/Days_countdown/issues">Report Bug</a>
+    <a href="https://github.com/TheGoldenCloud/Birthday-reminder/issues">Report Bug</a>
     ·
-    <a href="https://github.com/TheGoldenCloud/Days_countdown/issues">Request Feature</a>
+    <a href="https://github.com/TheGoldenCloud/Birthday-reminder/issues">Request Feature</a>
   </p>
 </div>
 
@@ -48,10 +48,10 @@
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-<img src="/public/birth.png" alt="appImg" width="300" height="500">
+<!-- <img src="/public/app.png" alt="appImg" width="300" height="500"> -->
+<img src="/Birthday-reminder/birthdayReminder/public/birth.png" alt="appImg" width="300" height="500">
 
-This project is small and simple, created for like desktop widget that can be used for reminding yourself occasionally. All data are stored in json file
-that is in the app. No need for deleting data because when the time passes app will delete all events that passed.
+This is a small react app that is used for displaying birthdays from mysql database, and birthdays can be deleted just on renderer side.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -61,7 +61,6 @@ that is in the app. No need for deleting data because when the time passes app w
 
 [![My Skills](https://skillicons.dev/icons?i=react)](https://skillicons.dev)
 [![My Skills](https://skillicons.dev/icons?i=bootstrap)](https://skillicons.dev)
-[![My Skills](https://skillicons.dev/icons?i=electron)](https://skillicons.dev)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,17 +80,29 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/TheGoldenCloud/Days_countdown.git
+   git clone https://github.com/TheGoldenCloud/Birthday-reminder.git
    ```
 2. Get into app file
    ```sh
-   cd eventDays
+   cd Birthday-reminder
    ```
 3. Install NPM packages
    ```sh
    npm install
    ```
-4. Start app
+4. Start server
+   ```sh
+   npm start
+
+5. Get into front
+   ```sh
+   cd birthdayReminder
+
+6. Install NPM packages
+   ```sh
+   npm install
+   ```
+7. Start app
    ```sh
    npm run dev
    ```
