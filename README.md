@@ -46,7 +46,7 @@
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
 <!-- <img src="/public/app.png" alt="appImg" width="300" height="500"> -->
-<img src="./Birthday-reminder/birthdayReminder/public/birth.png" alt="appImg" width="300" height="500">
+<img src="./birthdayReminder/public/birth.png" alt="appImg" width="300" height="500">
 
 This is a small react app that is used for displaying birthdays from mysql database, and birthdays can be deleted just on renderer side.
 
