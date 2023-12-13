@@ -3,13 +3,12 @@
 <br />
 <div align="center">
   <a href="https://github.com/TheGoldenCloud/Birthday-reminder">
-    <img src="./birthdayReminder/public/birthday-cake-svgrepo-com.svg" alt="Logo" width="80" height="80">
+    <img src="/Birthday-reminder/birthdayReminder/public/birthday-cake-svgrepo-com.svg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Birthday reminder</h3>
 
   <p align="center">
-    Small Electron app that stores events and counting days for them to finnish 
     <br />
     <br />
     ·
