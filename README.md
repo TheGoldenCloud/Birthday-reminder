@@ -3,14 +3,12 @@
 <br />
 <div align="center">
   <a href="https://github.com/TheGoldenCloud/Birthday-reminder">
-    <img src="/Birthday-reminder/birthdayReminder/public/birthday-cake-svgrepo-com.svg" alt="Logo" width="80" height="80">
+    <img src="./birthdayReminder/public/birthday-cake-svgrepo-com.svg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Birthday reminder</h3>
 
   <p align="center">
-    <br />
-    <br />
     ·
     <a href="https://github.com/TheGoldenCloud/Birthday-reminder/issues">Report Bug</a>
     ·
@@ -48,7 +46,7 @@
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
 <!-- <img src="/public/app.png" alt="appImg" width="300" height="500"> -->
-<img src="/Birthday-reminder/birthdayReminder/public/birth.png" alt="appImg" width="300" height="500">
+<img src="./Birthday-reminder/birthdayReminder/public/birth.png" alt="appImg" width="300" height="500">
 
 This is a small react app that is used for displaying birthdays from mysql database, and birthdays can be deleted just on renderer side.
 
